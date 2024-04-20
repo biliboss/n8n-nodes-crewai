@@ -88,6 +88,11 @@ export class Crew implements INodeType {
 		let item: INodeExecutionData;
 		let myString: string;
 
+		const agents = (await this.getInputConnectionData(
+			NodeConnectionType.AiAgent,
+			0,
+		)) as Object;
+
 		for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 			try {
 				myString = this.getNodeParameter('myString', itemIndex, '') as string;
@@ -105,7 +110,7 @@ export class Crew implements INodeType {
 
 				// Assume that your Python function returns a string that you
 				// want to add to the json object.
-				item.json['myString3'] = stdout;
+				item.json['myString3'] = JSON.stringify(agents);
 
 			} catch (error) {
 				if (this.continueOnFail()) {

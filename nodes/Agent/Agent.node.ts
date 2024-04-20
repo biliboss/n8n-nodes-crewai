@@ -101,7 +101,7 @@ export class Agent implements INodeType {
 
 		// Depending on the CrewAI Agent implementation, you might directly execute tasks or return the agent configuration
 		return {
-			response: `Hello Agent ${role} ${goal} ${memory} ${verbose} ${backstory}`
+			response: {role, goal, memory, verbose, backstory}
 		};
 	}
 }
