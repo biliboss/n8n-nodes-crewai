@@ -1,0 +1,30 @@
+{
+	"agents": [
+		{
+			"role": "Senior Researcher",
+			"goal": "Investigate cutting-edge AI technologies",
+			"verbose": true,
+			"memory": true,
+			"backstory": "With an extensive background in AI research, this agent is always on the lookout for the next big breakthrough."
+		},
+		{
+			"role": "Content Writer",
+			"goal": "Craft engaging and informative content on AI advancements",
+			"verbose": true,
+			"memory": true,
+			"backstory": "A talented writer skilled in making complex topics accessible and interesting to a wide audience."
+		}
+	],
+	"tasks": [
+		{
+			"description": "Identify and analyze the latest trends in AI research.",
+			"expected_output": "A detailed report highlighting the most promising AI technologies.",
+			"agent_role": "Senior Researcher"
+		},
+		{
+			"description": "Write an article summarizing recent AI advancements for our blog.",
+			"expected_output": "An engaging 1000-word article suitable for publication.",
+			"agent_role": "Content Writer"
+		}
+	]
+}

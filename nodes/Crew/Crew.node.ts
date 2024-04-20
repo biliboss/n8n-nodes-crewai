@@ -8,6 +8,7 @@ import {
 
 import {exec} from 'child_process';
 import {promisify} from 'util';
+import sample_request_01 from "../../python/sample_request_01";
 
 const execPromise = promisify(exec);
 
@@ -88,10 +89,10 @@ export class Crew implements INodeType {
 		let item: INodeExecutionData;
 		let myString: string;
 
-		const agents = (await this.getInputConnectionData(
-			NodeConnectionType.AiAgent,
-			0,
-		)) as Object;
+		// const agents = (await this.getInputConnectionData(
+		// 	NodeConnectionType.AiAgent,
+		// 	0,
+		// )) as Object;
 
 		for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 			try {
@@ -99,8 +100,16 @@ export class Crew implements INodeType {
 				item = items[itemIndex];
 				myString = myString;
 
+
+
+				console.log('running');
+				let jsonParams = JSON.stringify(sample_request_01);
+				jsonParams = jsonParams.replace(/"/g, '\\"');
+				jsonParams = `"${jsonParams}"`;
+
+				console.log(`python python/crewai.py --json ${jsonParams}`);
 				// Calling python function
-				const {stdout} = await execPromise('python sample.py');
+				const { stdout } = await execPromise(`python python/n8n-crewai.py --json ${jsonParams}`);
 				// if (error) {
 				// 	console.error(`exec error: ${error}`);
 				// 	return;
@@ -110,7 +119,7 @@ export class Crew implements INodeType {
 
 				// Assume that your Python function returns a string that you
 				// want to add to the json object.
-				item.json['myString3'] = JSON.stringify(agents);
+				item.json['myString3'] = stdout;
 
 			} catch (error) {
 				if (this.continueOnFail()) {

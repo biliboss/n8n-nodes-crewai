@@ -10,7 +10,10 @@ This project is a work-in-progress, creating custom N8N nodes for CrewAI.
   - I`ve cloned the n8n-nodes-starter
 - [x] Try to Call a Python in this poc
 - [x] Try to use the Node type used in new LLM nodes
-  - [ ] Understand how to manipulate the properties to enable pass them to the crewAI Python
+  - [X] Understand how to manipulate the properties to enable pass them to the crewAI Python
+  - [ ] Create a initial version of a Python CrewAI that receives the result of a crew
+  - [ ] Map the N8N parameters to the script
+  - [ ] Create a initial version of a Python CrewAI that receives the parameters from N8N
 - [ ] Study and use versioning
   https://docs.n8n.io/integrations/creating-nodes/build/reference/node-versioning/
 - [ ] Have followed the guidelines on build custom nodes
@@ -25,3 +28,5 @@ This project is a work-in-progress, creating custom N8N nodes for CrewAI.
 - Outline structure for a programmatic-style node#
   https://docs.n8n.io/integrations/creating-nodes/build/reference/node-base-files/#outline-structure-for-a-programmatic-style-node
 - https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/
+- How to pass json as parameter
+	--json "{\"agents\":

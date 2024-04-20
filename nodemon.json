@@ -1,0 +1,5 @@
+{
+	"watch": ["nodes", "python"],
+	"ext": "ts",
+	"exec": "npm run build-and-run-n8n"
+}

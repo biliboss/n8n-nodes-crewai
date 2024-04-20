@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="a small step towards creating a node like the new ones uses in LLM">
-      <change afterPath="$PROJECT_DIR$/nodes/Agent/Agent.node.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/Crew/Crew.node.ts" afterDir="false" />
+    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="ignore .env files">
+      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/nodes/ExampleNode/sample.tss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/Task/Task.node.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/n8n-crewai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/sample_request_01.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/sample_request_01.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/Crew/Crew.node.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/Crew/Crew.node.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/src/n8n-crewai/nodes",
+    "last_opened_file_path": "C:/src/n8n-crewai/python",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,12 +63,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\src\n8n-crewai\python" />
+      <recent name="C:\src\n8n-crewai" />
       <recent name="C:\src\n8n-crewai\nodes" />
       <recent name="C:\src\n8n-crewai\nodes\Crew" />
       <recent name="C:\src\n8n-crewai\nodes\ExampleNode" />
-      <recent name="C:\src\n8n-crewai\credentials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\src\n8n-crewai\python" />
       <recent name="C:\src\n8n-crewai" />
     </key>
   </component>
@@ -107,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713609254989</updated>
       <workItem from="1713609256564" duration="296000" />
-      <workItem from="1713609566878" duration="8870000" />
+      <workItem from="1713609566878" duration="14259000" />
     </task>
     <task id="LOCAL-00001" summary="Add project todo">
       <option name="closed" value="true" />
@@ -165,7 +169,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713615579840</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="create initial CrewAI nodes, Crew, Agent and Task node">
+      <option name="closed" value="true" />
+      <created>1713619221273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713619221273</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add wip image">
+      <option name="closed" value="true" />
+      <created>1713619320553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713619320553</updated>
+    </task>
+    <task id="LOCAL-00010" summary="understood how get agent node data.">
+      <option name="closed" value="true" />
+      <created>1713619745155</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713619745155</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ignore .env files">
+      <option name="closed" value="true" />
+      <created>1713623445641</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713623445641</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +215,10 @@
     <MESSAGE value="started off from n8n-nodes-starter" />
     <MESSAGE value="add poc of calling python script" />
     <MESSAGE value="a small step towards creating a node like the new ones uses in LLM" />
-    <option name="LAST_COMMIT_MESSAGE" value="a small step towards creating a node like the new ones uses in LLM" />
+    <MESSAGE value="create initial CrewAI nodes, Crew, Agent and Task node" />
+    <MESSAGE value="add wip image" />
+    <MESSAGE value="understood how get agent node data." />
+    <MESSAGE value="ignore .env files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore .env files" />
   </component>
 </project>
