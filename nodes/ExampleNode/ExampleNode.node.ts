@@ -2,7 +2,7 @@ import {
 	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
-	INodeTypeDescription,
+	INodeTypeDescription, NodeConnectionType,
 	NodeOperationError,
 } from 'n8n-workflow';
 
@@ -11,7 +11,26 @@ import { promisify } from 'util';
 
 const execPromise = promisify(exec);
 
+function getInputs() {
+	const inputs = [
+		{ displayName: '', type: NodeConnectionType.Main },
+		{
+			displayName: 'Model',
+			maxConnections: 20,
+			type: NodeConnectionType.AiLanguageModel,
+			required: true,
+		},
+	];
+
+	// If `hasOutputParser` is undefined it must be version 1.3 or earlier so we
+	// always add the output parser input
+	// if (hasOutputParser === undefined || hasOutputParser === true) {
+	// 	inputs.push({ displayName: 'Output Parser', type: NodeConnectionType.AiOutputParser });
+	// }
+	return inputs;
+}
 export class ExampleNode implements INodeType {
+
 	description: INodeTypeDescription = {
 		displayName: 'Example Node',
 		name: 'exampleNode',
@@ -21,7 +40,8 @@ export class ExampleNode implements INodeType {
 		defaults: {
 			name: 'Example Node',
 		},
-		inputs: ['main'],
+		// inputs: ['main'],
+		inputs: `={{ ((parameter) => { ${getInputs.toString()}; return getInputs(parameter) })($parameter) }}`,
 		outputs: ['main'],
 		properties: [
 			{
@@ -34,6 +54,8 @@ export class ExampleNode implements INodeType {
 			},
 		],
 	};
+
+
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const items = this.getInputData();
