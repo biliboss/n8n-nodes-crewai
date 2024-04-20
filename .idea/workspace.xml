@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="add annotations">
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="started off from n8n-nodes-starter">
+      <change afterPath="$PROJECT_DIR$/sample.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/ExampleNode/ExampleNode.node.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/ExampleNode/ExampleNode.node.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +42,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.build-and-run-n8n.executor": "Run",
     "npm.build.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\src\\n8n-crewai\\node_modules\\typescript\\lib",
@@ -96,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713609254989</updated>
       <workItem from="1713609256564" duration="296000" />
-      <workItem from="1713609566878" duration="3965000" />
+      <workItem from="1713609566878" duration="4392000" />
     </task>
     <task id="LOCAL-00001" summary="Add project todo">
       <option name="closed" value="true" />
@@ -130,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713612740722</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="started off from n8n-nodes-starter">
+      <option name="closed" value="true" />
+      <created>1713614023182</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713614023182</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +148,7 @@
     <MESSAGE value="Add package.json with keyword n8n-community-node-package" />
     <MESSAGE value="fix project name to fit the n8n standards" />
     <MESSAGE value="add annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="add annotations" />
+    <MESSAGE value="started off from n8n-nodes-starter" />
+    <option name="LAST_COMMIT_MESSAGE" value="started off from n8n-nodes-starter" />
   </component>
 </project>
