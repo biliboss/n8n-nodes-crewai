@@ -35,6 +35,9 @@
       "dist/credentials/HttpBinApi.credentials.js"
     ],
     "nodes": [
+      "dist/nodes/Crew/Crew.node.js",
+      "dist/nodes/Agent/Agent.node.js",
+      "dist/nodes/Task/Task.node.js",
       "dist/nodes/ExampleNode/ExampleNode.node.js",
       "dist/nodes/HttpBin/HttpBin.node.js"
     ]

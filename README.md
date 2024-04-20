@@ -2,12 +2,15 @@
 
 This project is a work-in-progress, creating custom N8N nodes for CrewAI.
 
+![https://ibb.co/BZn8bJG]
+
 # TODOs
 
 - [x] Create a Simple N8N Custom Node
   - I`ve cloned the n8n-nodes-starter
 - [x] Try to Call a Python in this poc
-- [ ] Try to use the Node type used in new LLM nodes
+- [x] Try to use the Node type used in new LLM nodes
+  - [ ] Understand how to manipulate the properties to enable pass them to the crewAI Python
 - [ ] Study and use versioning
   https://docs.n8n.io/integrations/creating-nodes/build/reference/node-versioning/
 - [ ] Have followed the guidelines on build custom nodes

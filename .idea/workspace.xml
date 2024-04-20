@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="started off from n8n-nodes-starter">
-      <change afterPath="$PROJECT_DIR$/sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/ExampleNode/ExampleNode.node.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/ExampleNode/ExampleNode.node.ts" afterDir="false" />
+    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="a small step towards creating a node like the new ones uses in LLM">
+      <change afterPath="$PROJECT_DIR$/nodes/Agent/Agent.node.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/Crew/Crew.node.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/ExampleNode/sample.tss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/Task/Task.node.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +62,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\src\n8n-crewai\nodes" />
+      <recent name="C:\src\n8n-crewai\nodes\Crew" />
+      <recent name="C:\src\n8n-crewai\nodes\ExampleNode" />
       <recent name="C:\src\n8n-crewai\credentials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -95,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713609254989</updated>
       <workItem from="1713609256564" duration="296000" />
-      <workItem from="1713609566878" duration="4392000" />
+      <workItem from="1713609566878" duration="8870000" />
     </task>
     <task id="LOCAL-00001" summary="Add project todo">
       <option name="closed" value="true" />
@@ -137,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713614023182</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add poc of calling python script">
+      <option name="closed" value="true" />
+      <created>1713614566189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713614566189</updated>
+    </task>
+    <task id="LOCAL-00007" summary="a small step towards creating a node like the new ones uses in LLM">
+      <option name="closed" value="true" />
+      <created>1713615579840</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713615579840</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +177,8 @@
     <MESSAGE value="fix project name to fit the n8n standards" />
     <MESSAGE value="add annotations" />
     <MESSAGE value="started off from n8n-nodes-starter" />
-    <option name="LAST_COMMIT_MESSAGE" value="started off from n8n-nodes-starter" />
+    <MESSAGE value="add poc of calling python script" />
+    <MESSAGE value="a small step towards creating a node like the new ones uses in LLM" />
+    <option name="LAST_COMMIT_MESSAGE" value="a small step towards creating a node like the new ones uses in LLM" />
   </component>
 </project>
