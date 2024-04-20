@@ -11,8 +11,9 @@ This project is a work-in-progress, creating custom N8N nodes for CrewAI.
 - [x] Try to Call a Python in this poc
 - [x] Try to use the Node type used in new LLM nodes
   - [X] Understand how to manipulate the properties to enable pass them to the crewAI Python
-  - [ ] Create a initial version of a Python CrewAI that receives the result of a crew
+  - [X] Create a initial version of a Python CrewAI that receives the result of a crew
   - [ ] Map the N8N parameters to the script
+  - [ ] Configure credentials in N8N
   - [ ] Create a initial version of a Python CrewAI that receives the parameters from N8N
 - [ ] Study and use versioning
   https://docs.n8n.io/integrations/creating-nodes/build/reference/node-versioning/

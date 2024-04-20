@@ -8,7 +8,8 @@ import {
 
 import {exec} from 'child_process';
 import {promisify} from 'util';
-import sample_request_01 from "../../python/sample_request_01";
+import {CrewAIAgent} from "../Agent/interface";
+import {CrewAITask} from "../Task/interface";
 
 const execPromise = promisify(exec);
 
@@ -89,10 +90,15 @@ export class Crew implements INodeType {
 		let item: INodeExecutionData;
 		let myString: string;
 
-		// const agents = (await this.getInputConnectionData(
-		// 	NodeConnectionType.AiAgent,
-		// 	0,
-		// )) as Object;
+		const agents = (await this.getInputConnectionData(
+			NodeConnectionType.AiAgent,
+			0,
+		)) as CrewAIAgent[];
+
+		const tasks = (await this.getInputConnectionData(
+			NodeConnectionType.AiTool,
+			0,
+		)) as CrewAITask[];
 
 		for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 			try {
@@ -103,11 +109,14 @@ export class Crew implements INodeType {
 
 
 				console.log('running');
-				let jsonParams = JSON.stringify(sample_request_01);
+				let jsonParams: any = {};
+				jsonParams.agents = agents;
+				jsonParams.tasks = tasks;
+				jsonParams = JSON.stringify(jsonParams);
 				jsonParams = jsonParams.replace(/"/g, '\\"');
 				jsonParams = `"${jsonParams}"`;
 
-				console.log(`python python/crewai.py --json ${jsonParams}`);
+				console.log(`python python/n8n-crewai.py --json ${jsonParams}`);
 				// Calling python function
 				const { stdout } = await execPromise(`python python/n8n-crewai.py --json ${jsonParams}`);
 				// if (error) {

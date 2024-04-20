@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="ignore .env files">
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/ExampleNode/sample.tss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/n8n-crewai.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/sample_request_01.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/sample_request_01.ts" afterDir="false" />
+    <list default="true" id="c5c58a77-950e-47a7-a99e-f558ec48170d" name="Changes" comment="n8n retrieve the results from crewAI">
+      <change afterPath="$PROJECT_DIR$/nodes/Agent/interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/Task/interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodes/Crew/Crew.node.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/Crew/Crew.node.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/Task/Task.node.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/Task/Task.node.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/n8n-crewai.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/n8n-crewai.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/src/n8n-crewai/python",
+    "last_opened_file_path": "C:/src/n8n-crewai/nodes/Task",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,20 +55,21 @@
     "nodejs_package_manager_path": "npm",
     "npm.build-and-run-n8n.executor": "Run",
     "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "advanced.settings",
     "ts.external.directory.path": "C:\\src\\n8n-crewai\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\src\n8n-crewai\nodes\Task" />
       <recent name="C:\src\n8n-crewai\python" />
       <recent name="C:\src\n8n-crewai" />
       <recent name="C:\src\n8n-crewai\nodes" />
       <recent name="C:\src\n8n-crewai\nodes\Crew" />
-      <recent name="C:\src\n8n-crewai\nodes\ExampleNode" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\src\n8n-crewai\nodes\Agent" />
       <recent name="C:\src\n8n-crewai\python" />
       <recent name="C:\src\n8n-crewai" />
     </key>
@@ -111,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713609254989</updated>
       <workItem from="1713609256564" duration="296000" />
-      <workItem from="1713609566878" duration="14259000" />
+      <workItem from="1713609566878" duration="16272000" />
     </task>
     <task id="LOCAL-00001" summary="Add project todo">
       <option name="closed" value="true" />
@@ -201,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713623445641</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="n8n retrieve the results from crewAI">
+      <option name="closed" value="true" />
+      <created>1713624478850</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713624478850</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +227,7 @@
     <MESSAGE value="add wip image" />
     <MESSAGE value="understood how get agent node data." />
     <MESSAGE value="ignore .env files" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore .env files" />
+    <MESSAGE value="n8n retrieve the results from crewAI" />
+    <option name="LAST_COMMIT_MESSAGE" value="n8n retrieve the results from crewAI" />
   </component>
 </project>

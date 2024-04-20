@@ -5,7 +5,7 @@ import type {
 	INodeTypeDescription,
 	SupplyData,
 } from 'n8n-workflow';
-import { NodeConnectionType } from 'n8n-workflow';
+import {NodeConnectionType} from 'n8n-workflow';
 
 // import { Task } from '@langchain/crewai'; // Assuming this is the path to Task class
 
@@ -57,6 +57,13 @@ export class Task implements INodeType {
 					rows: 2,
 				},
 			},
+			{
+				displayName: 'Agent',
+				name: 'agent',
+				type: 'string',
+				default: '',
+				placeholder: 'Marketing Researcher - The name of your agent'
+			},
 			// Here you might include properties related to tool association, async execution, output file customization, etc.
 			// Additional properties can be added as required to match the Task class signature in CrewAI.
 		],
@@ -65,6 +72,7 @@ export class Task implements INodeType {
 	async supplyData(this: IExecuteFunctions, itemIndex: number): Promise<SupplyData> {
 		const description = this.getNodeParameter('description', itemIndex) as string;
 		const expectedOutput = this.getNodeParameter('expectedOutput', itemIndex) as string;
+		const agent = this.getNodeParameter('agent', itemIndex) as string;
 
 		// Assuming the Task class from CrewAI has a constructor that matches these parameters
 		// const task = new Task({
@@ -75,7 +83,11 @@ export class Task implements INodeType {
 
 		// Depending on the CrewAI Task implementation, you might directly execute the task or return the task configuration
 		return {
-			response: `Configured Task: ${description} with expected output: ${expectedOutput}`
+			response: {
+				description,
+				expected_output: expectedOutput,
+				agent
+			}
 		};
 	}
 }

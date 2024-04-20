@@ -36,9 +36,9 @@ def create_tasks(tasks_json, agents):
 		# Find the agent for this task
 		print('task_def')
 		print(task_def)
-		agent = next((agent for agent in agents if agent.role == task_def["agent_role"]), None)
+		agent = next((agent for agent in agents if agent.role == task_def["agent"]), None)
 		if not agent:
-			print(f"No agent found for the role: {task_def['agent_role']}")
+			print(f"No agent found for the role: {task_def['agent']}")
 			continue
 
 		task = Task(
