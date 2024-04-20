@@ -2,7 +2,7 @@
 
 This project is a work-in-progress, creating custom N8N nodes for CrewAI.
 
-![https://ibb.co/BZn8bJG]
+![WIP](https://i.ibb.co/QNDsLVk/image-2024-04-20-101720761.png)
 
 # TODOs
 
