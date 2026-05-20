@@ -38,7 +38,8 @@
     "nodes": [
       "dist/nodes/Crew/Crew.node.js",
       "dist/nodes/Agent/Agent.node.js",
-      "dist/nodes/Task/Task.node.js"
+      "dist/nodes/Task/Task.node.js",
+      "dist/nodes/Tool/Tool.node.js"
     ]
   },
   "devDependencies": {
