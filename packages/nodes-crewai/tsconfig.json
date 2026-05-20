@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "useUnknownInCatchVariables": false,
+    "incremental": true,
+    "types": ["node"]
+  },
+  "include": ["nodes/**/*.ts", "credentials/**/*.ts", "index.ts"],
+  "exclude": ["node_modules", "dist", "scripts"]
+}

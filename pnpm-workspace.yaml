@@ -1,0 +1,3 @@
+packages:
+  - "packages/*"
+# services/* is intentionally excluded — Python lives outside pnpm.

@@ -1,0 +1,36 @@
+# Local-only n8n for visual validation of CrewAI custom nodes.
+# DO NOT use in production — auth disabled, encryption key fixed.
+# See docs/adr/004-visual-feedback-loop.md for rationale.
+services:
+  n8n:
+    image: n8nio/n8n:1.74.1
+    container_name: n8n-nodes-crewai-dev
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://localhost:5678/
+      - N8N_SECURE_COOKIE=false
+      - N8N_USER_MANAGEMENT_DISABLED=true
+      - N8N_DIAGNOSTICS_ENABLED=false
+      - N8N_HIRING_BANNER_ENABLED=false
+      - N8N_PERSONALIZATION_ENABLED=false
+      - N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/custom
+      - N8N_LOG_LEVEL=debug
+      - N8N_LOG_OUTPUT=console
+      - NODE_FUNCTION_ALLOW_EXTERNAL=*
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_ENCRYPTION_KEY=dev-only-not-a-secret-2026
+      # Resolve n8n-workflow (and other shared deps) from n8n's bundled modules
+      - NODE_PATH=/usr/local/lib/node_modules/n8n/node_modules
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ../../packages/nodes-crewai:/home/node/.n8n/custom/n8n-nodes-crewai:ro
+      - ../workflows:/home/node/workflows:ro
+
+volumes:
+  n8n_data:
+    name: n8n-nodes-crewai-dev-data

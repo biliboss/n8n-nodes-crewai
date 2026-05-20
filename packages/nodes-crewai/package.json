@@ -1,0 +1,57 @@
+{
+  "name": "n8n-nodes-crewai",
+  "version": "0.2.0-alpha.0",
+  "description": "n8n custom nodes that mirror the CrewAI multi-agent framework's semantics in the visual editor.",
+  "keywords": [
+    "n8n-community-node-package",
+    "crewai",
+    "ai",
+    "agents",
+    "multi-agent"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/biliboss/n8n-nodes-crewai",
+  "author": {
+    "name": "biliboss",
+    "email": "gabriel@devmagic.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biliboss/n8n-nodes-crewai.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "dev:visual": "concurrently -n tsc,icons,n8n \"tsc --watch\" \"gulp watch:icons\" \"nodemon --watch dist --delay 800ms --exec 'docker compose -f ../../docker/n8n/docker-compose.yml restart n8n'\"",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "visual:capture": "playwright test scripts/visual-capture.spec.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "dist/nodes/Crew/Crew.node.js",
+      "dist/nodes/Agent/Agent.node.js",
+      "dist/nodes/Task/Task.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/parser": "~7.0.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.0",
+    "gulp": "^4.0.2",
+    "n8n-core": "~1.73.0",
+    "n8n-workflow": "~1.73.0",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,56 +1,26 @@
 {
-  "name": "n8n-nodes-crewai",
-  "version": "0.1.0",
-  "description": "",
-  "keywords": [
-    "n8n-community-node-package"
-  ],
+  "name": "n8n-nodes-crewai-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Monorepo for n8n-nodes-crewai v2 (TS nodes, shared schema, Python bridge placeholder).",
   "license": "MIT",
-  "homepage": "",
-  "author": {
-    "name": "",
-    "email": ""
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18.17"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
-  },
-  "main": "index.js",
   "scripts": {
-    "build": "tsc && gulp build:icons",
-    "build-and-run-n8n": "tsc && gulp build:icons && n8n start",
-    "dev": "tsc --watch",
-    "format": "prettier nodes credentials --write",
-    "lint": "eslint nodes credentials package.json",
-    "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
-  },
-  "files": [
-    "dist"
-  ],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/Crew/Crew.node.js",
-      "dist/nodes/Agent/Agent.node.js",
-      "dist/nodes/Task/Task.node.js",
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
-    ]
+    "build": "pnpm -r --filter './packages/*' build",
+    "dev": "pnpm --filter n8n-nodes-crewai dev",
+    "dev:visual": "pnpm --filter n8n-nodes-crewai dev:visual",
+    "lint": "pnpm -r --filter './packages/*' lint",
+    "format": "prettier --write \"packages/**/*.{ts,json,md}\"",
+    "n8n:up": "docker compose -f docker/n8n/docker-compose.yml up -d",
+    "n8n:down": "docker compose -f docker/n8n/docker-compose.yml down",
+    "n8n:logs": "docker compose -f docker/n8n/docker-compose.yml logs -f n8n",
+    "visual:capture": "pnpm --filter n8n-nodes-crewai visual:capture"
   },
   "devDependencies": {
-    "@types/express": "^4.17.6",
-    "@types/request-promise-native": "~1.0.15",
-    "@typescript-eslint/parser": "~5.45",
-    "eslint-plugin-n8n-nodes-base": "^1.11.0",
-    "gulp": "^4.0.2",
-    "n8n-core": "*",
-    "n8n-workflow": "*",
-    "prettier": "^2.7.1",
-    "typescript": "~4.8.4"
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
   }
 }
