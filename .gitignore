@@ -13,3 +13,11 @@ dist/
 
 # screenshots from visual capture
 docs/screenshots/
+
+# Playwright artifacts
+test-results/
+playwright-report/
+.playwright/
+
+# IDE
+.idea/
